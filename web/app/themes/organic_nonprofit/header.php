@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width">
 <?php } ?>
 
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo('blogname'); ?> | <?php bloginfo('description'); ?></title>
 <link rel="Shortcut Icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/x-icon">
 
 <?php get_template_part( 'style', 'options' ); ?>
@@ -97,10 +97,7 @@
 				} else { ?>
 					<div class="menu-container"><ul class="menu"><?php wp_list_pages('title_li=&depth=4'); ?></ul></div>
 				<?php } ?>
-				
-				<span class="corner-left"></span>
-				<span class="corner-right"></span>
-	
+					
 			</nav><!-- END #navigation -->
 			
 		<!-- END .row -->

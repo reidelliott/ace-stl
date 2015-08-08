@@ -86,6 +86,7 @@ if( !function_exists('nonprofit_enqueue_scripts') ) {
 		wp_enqueue_style( 'organic-shortcodes-ie8', get_template_directory_uri() . '/shortcodes/organic-shortcodes-ie8.css', array( 'organic-shortcodes' ), '1.0' );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'organic-shortcodes' ), '1.0' );
 		wp_enqueue_style( 'font-awesome-ie7', get_template_directory_uri() . '/css/font-awesome-ie7.css', array( 'font-awesome' ), '1.0' );
+		wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', array(), '1.0' );
 		
 		// IE Conditional Styles
 		global $wp_styles;

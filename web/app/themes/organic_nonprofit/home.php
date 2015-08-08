@@ -28,13 +28,13 @@
 							    <?php if ( has_post_thumbnail()) { ?>
 								    <a class="feature-img" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php esc_attr(the_title_attribute()); ?>"><?php the_post_thumbnail( 'featured-large' ); ?></a>
 							    <?php } else { ?>
-							    	<a class="feature-img" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php esc_attr(the_title_attribute()); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/default-slide.png" alt="<?php the_title(); ?>" /></a>
+							    	<a class="feature-img" href="/classes" rel="bookmark" title="<?php esc_attr(the_title_attribute()); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.jpg" alt="<?php the_title(); ?>" /></a>
 							    <?php } ?>
 							<?php } ?>
 							<div class="holder">
 								<div class="information">
-									<h2 class="headline"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						            <?php the_excerpt(); ?>
+									<h2 class="headline"><a href="/classes" rel="bookmark">Expecting or Soon to be Expecting?</a></h2>
+						            <h3 class="headline"><a href="/classes" rel="bookmark">Find a Class here!</a></h3>
 					            </div>
 					            <span class="background"></span>
 							</div>
@@ -55,10 +55,16 @@
 	
 	<!-- END .row -->
 	</div>
+	<div class="row">
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div>
+	</div>
 	
 	<?php if(of_get_option('display_home_mid') == '1') { ?>
 	<?php if ( 'false' != of_get_option( 'mid_page_left' ) && 'false' != of_get_option( 'mid_page_mid' ) && 'false' != of_get_option( 'mid_page_right' ) ) { ?> 
 	
+
 	<!-- BEGIN .row -->
 	<div class="row">
 		
@@ -108,7 +114,7 @@
 					<?php $recent = new WP_Query('page_id='.of_get_option('bottom_page')); while($recent->have_posts()) : $recent->the_post(); ?>
 					
 		                <h3 class="headline"><?php the_title(); ?></h3>		
-		                <?php the_content(__("Learn More", 'organicthemes')); ?>
+		                <?php the_content(__("Meh!", 'organicthemes')); ?>
 		                
 		            <?php endwhile; ?>
 		        </div>

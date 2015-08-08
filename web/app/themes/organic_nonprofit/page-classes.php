@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Classes Page
+*/
+?>
+
 <?php get_header(); ?>
 
 <!-- BEGIN .container -->
